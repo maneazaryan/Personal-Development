@@ -87,18 +87,10 @@ void parseLine(std::string& line)
         }
     }
 
-    // while (!numbers.empty())
-    // {
-    //     std::cout << "number in stack: " << numbers.top() << std::endl;
-    //     numbers.pop();
-    // }
     
     calculate(numbers);
 }
 
-
-
-//add more op????
 bool getLine(std::string &line)
 {
     std::cout << "Enter a math expression(last character must be '='): ";
@@ -132,10 +124,7 @@ int main()
     {
         if (getLine(line))
         {
-            if (!line.empty())
-            {
-                parseLine(line);
-            }
+            parseLine(line);
         }
     }
     return 0;
