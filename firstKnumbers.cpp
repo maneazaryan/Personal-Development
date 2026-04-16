@@ -35,18 +35,13 @@ void printUsingPriorityQueueAndStack(std::array<int, 15>& arr, int k)
 
 void  printUsingPriorityQueue(std::array<int, 15>& arr, int k)
 {
-    auto lam = [](int a, int b)
-            {
-                return a > b;
-            };
-    //std::priority_queue<int, std::vector<int>, decltype(lam)> p_queue(lam);
     std::priority_queue<int,std::vector<int>, std::greater<int>> p_queue;
     for(int a : arr)
     {
         p_queue.push(a);
     }
     std::cout << "using priority queue: " << std::endl;
-    int count = p_queue.size()-4;
+    int count = p_queue.size()-k+1;
     while (!p_queue.empty())
     {
         if(count > 1)

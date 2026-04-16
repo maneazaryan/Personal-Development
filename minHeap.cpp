@@ -2,7 +2,6 @@
 #include <vector>
 #include <algorithm>
 
-// not working version
 class MinHeap
 {
 private:
